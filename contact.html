@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系贾马尔</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .language-selector {
+            margin: 20px 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            padding: 30px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e6b800;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const translations = {
+                en: {
+                    title: "Contact Jamal",
+                    getInTouch: "Get in Touch",
+                    namePlaceholder: "Your Name",
+                    emailPlaceholder: "Your Email",
+                    messagePlaceholder: "Your Message",
+                    sendMessage: "Send Message",
+                    about: "About",
+                    skills: "Skills",
+                    projects: "Projects",
+                    contact: "Contact",
+                    footerText: "© 2025 Jamal Inc. All Rights Reserved.",
+                    formTitle: "Or Fill Out This Form",
+                    formText: "If you prefer, you can fill out the form below:",
+                    formLinkText: "Click here to open the form"
+                },
+                zh: {
+                    title: "联系贾马尔",
+                    getInTouch: "取得联系",
+                    namePlaceholder: "你的名字",
+                    emailPlaceholder: "你的电子邮件",
+                    messagePlaceholder: "你的信息",
+                    sendMessage: "发送消息",
+                    about: "关于",
+                    skills: "技能",
+                    projects: "项目",
+                    contact: "联系",
+                    footerText: "© 2025 贾马尔公司。保留所有权利。",
+                    formTitle: "或填写此表格",
+                    formText: "如果你愿意，你可以填写以下表格：",
+                    formLinkText: "点击这里打开表格"
+                }
+            };
+
+            function changeLanguage(lang) {
+                document.title = translations[lang].title;
+                document.querySelector("header h1").textContent = translations[lang].title;
+                document.querySelector(".section h2").textContent = translations[lang].getInTouch;
+                document.getElementById("name").placeholder = translations[lang].namePlaceholder;
+                document.querySelector("input[type='email']").placeholder = translations[lang].emailPlaceholder;
+                document.querySelector("textarea").placeholder = translations[lang].messagePlaceholder;
+                document.querySelector("button").textContent = translations[lang].sendMessage;
+                document.querySelector("nav a[href='index.html']").textContent = translations[lang].about;
+                document.querySelector("nav a[href='skills.html']").textContent = translations[lang].skills;
+                document.querySelector("nav a[href='Project.html']").textContent = translations[lang].projects;
+                document.querySelector("nav a[href='contact.html']").textContent = translations[lang].contact;
+                document.querySelector("footer p").textContent = translations[lang].footerText;
+                document.querySelector(".section:nth-of-type(2) h2").textContent = translations[lang].formTitle;
+                document.querySelector(".section:nth-of-type(2) p").textContent = translations[lang].formText;
+                document.querySelector(".section:nth-of-type(2) a").textContent = translations[lang].formLinkText;
+            }
+
+            document.querySelector(".language-selector").addEventListener("change", function (event) {
+                changeLanguage(event.target.value);
+            });
+            changeLanguage("zh");
+        });
+    </script>
+</head>
+<body>
+    <header><h1>联系贾马尔</h1></header>
+    <nav>
+        <a href="index.html">关于</a>
+        <a href="skills.html">技能</a>
+        <a href="Project.html">项目</a>
+        <a href="contact.html">联系</a>
+    </nav>
+    <div>
+        <select class="language-selector">
+            <option value="en">English</option>
+            <option value="zh" selected>中文</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>取得联系</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="你的名字" required>
+                <input type="email" placeholder="你的电子邮件" required>
+                <textarea placeholder="你的信息" rows="5" required></textarea>
+                <button type="submit">发送消息</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>或填写此表格</h2>
+            <p>如果你愿意，你可以填写以下表格：</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScompXUIlcWTl_p0pKdbLohS7218-1PzXEauX-EkBMSOfkBUw/viewform?usp=dialog">点击这里打开表格</a>
+        </div>
+    </div>
+    <footer><p>&copy; 2025 Jamal Inc. All Rights Reserved.</p></footer>
+</body>
+</html>
+

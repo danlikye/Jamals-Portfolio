@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamal's Skills</title>
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            padding: 30px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid-item img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .language-select {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #333;
+            color: #ffcc00;
+        }
+        .language-select:focus {
+            outline: none;
+        }
+
+        /* 🌐 Mobile-Friendly Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-item img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            header {
+                font-size: 24px;
+                padding: 15px;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .language-select {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+    <script>
+        function translateLanguage() {
+            let language = document.getElementById("language").value;
+
+            if (language === "chinese") {
+                document.getElementById("title").innerText = "贾马尔的技能";
+                document.getElementById("nav-about").innerText = "关于";
+                document.getElementById("nav-skills").innerText = "技能";
+                document.getElementById("nav-project").innerText = "项目";
+                document.getElementById("nav-contact").innerText = "联系";
+                document.getElementById("skills-title").innerText = "技术技能";
+                document.getElementById("skill-1").innerText = "精通Python, JavaScript和C++";
+                document.getElementById("skill-2").innerText = "Web开发 (HTML, CSS, React, Node.js)";
+                document.getElementById("skill-3").innerText = "机器学习与人工智能";
+                document.getElementById("skill-4").innerText = "数据库管理 (SQL, MongoDB)";
+                document.getElementById("skill-5").innerText = "网络安全与道德黑客";
+                document.getElementById("footer-text").innerText = "© 2025 贾马尔公司。版权所有。";
+            } else {
+                document.getElementById("title").innerText = "Jamal's Skills";
+                document.getElementById("nav-about").innerText = "About";
+                document.getElementById("nav-skills").innerText = "Skills";
+                document.getElementById("nav-project").innerText = "Projects";
+                document.getElementById("nav-contact").innerText = "Contact";
+                document.getElementById("skills-title").innerText = "Technical Skills";
+                document.getElementById("skill-1").innerText = "Expert in Python, JavaScript, and C++";
+                document.getElementById("skill-2").innerText = "Web Development (HTML, CSS, React, Node.js)";
+                document.getElementById("skill-3").innerText = "Machine Learning & AI";
+                document.getElementById("skill-4").innerText = "Database Management (SQL, MongoDB)";
+                document.getElementById("skill-5").innerText = "Cybersecurity & Ethical Hacking";
+                document.getElementById("footer-text").innerText = "© 2025 Jamal Inc. All Rights Reserved.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="title">Jamal's Skills</h1>
+    </header>
+    <nav>
+        <a href="index.html" id="nav-about">About</a>
+        <a href="skills.html" id="nav-skills">Skills</a>
+        <a href="Project.html" id="nav-project">Projects</a>
+        <a href="contact.html" id="nav-contact">Contact</a>
+    </nav>
+    <select id="language" class="language-select" onchange="translateLanguage()">
+        <option value="english">English</option>
+        <option value="chinese">Chinese</option>
+    </select>
+    <div class="container">
+        <div class="section">
+            <h2 id="skills-title">Technical Skills</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <p id="skill-1">Expert in Python, JavaScript, and C++</p>
+                    <img src="ChatGPT Image Apr 7, 2025, 10_35_04 AM.png">
+                </div>
+                <div class="grid-item">
+                    <p id="skill-2">Web Development (HTML, CSS, React, Node.js)</p>
+                    <img src="output.jpg">
+                </div>
+                <div class="grid-item">
+                    <p id="skill-3">Machine Learning & AI</p>
+                    <img src="output (1).jpg">
+                </div>
+                <div class="grid-item">
+                    <p id="skill-4">Database Management (SQL, MongoDB)</p>
+                    <img src="output (2).jpg">
+                </div>
+                <div class="grid-item">
+                    <p id="skill-5">Cybersecurity & Ethical Hacking</p>
+                    <img src="output (3).jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p id="footer-text">&copy; 2025 Jamal Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

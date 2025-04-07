@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects done by Jamal the legend</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .language-selector {
+            margin: 20px auto;
+            display: block;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .section {
+            padding: 30px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            min-height: 100%;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        const translations = {
+            en: {
+                title: "Jamal's Projects",
+                about: "About",
+                skills: "Skills",
+                projects: "Projects",
+                contact: "Contact",
+                notableProjects: "Notable Projects",
+                project1Title: "Teaching People How to Mew",
+                project1Desc: "Jamal created an online platform where people can learn the art of mewing for better jawline definition.",
+                project2Title: "Teaching People How to Code",
+                project2Desc: "Jamal runs a coding bootcamp helping beginners master Python, JavaScript, and web development.",
+                footer: "&copy; 2025 Jamal Inc. All Rights Reserved."
+            },
+            zh: {
+                title: "贾马尔的项目",
+                about: "关于",
+                skills: "技能",
+                projects: "项目",
+                contact: "联系",
+                notableProjects: "著名项目",
+                project1Title: "教人如何进行 Mewing",
+                project1Desc: "贾马尔创建了一个在线平台，让人们学习 Mewing 技术，以获得更好的下颌线。",
+                project2Title: "教人如何编程",
+                project2Desc: "贾马尔运营一个编码训练营，帮助初学者掌握 Python、JavaScript 和 Web 开发。",
+                footer: "&copy; 2025 贾马尔公司。保留所有权利。"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById("title").innerText = translations[lang].title;
+            document.getElementById("about").innerText = translations[lang].about;
+            document.getElementById("skills").innerText = translations[lang].skills;
+            document.getElementById("projects").innerText = translations[lang].projects;
+            document.getElementById("contact").innerText = translations[lang].contact;
+            document.getElementById("notableProjects").innerText = translations[lang].notableProjects;
+            document.getElementById("project1Title").innerText = translations[lang].project1Title;
+            document.getElementById("project1Desc").innerText = translations[lang].project1Desc;
+            document.getElementById("project2Title").innerText = translations[lang].project2Title;
+            document.getElementById("project2Desc").innerText = translations[lang].project2Desc;
+            document.getElementById("footer").innerHTML = translations[lang].footer;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="title">Jamal's Projects</h1>
+    </header>
+    <nav>
+        <a id="about" href="index.html">About</a>
+        <a id="skills" href="skills.html">Skills</a>
+        <a id="projects" href="Project.html">Projects</a>
+        <a id="contact" href="contact.html">Contact</a>
+    </nav>
+    <select class="language-selector" onchange="changeLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+    </select>
+    <div class="container">
+        <div class="section">
+            <h2 id="notableProjects">Notable Projects</h2>
+            <div class="project">
+                <h3 id="project1Title">Teaching People How to Mew</h3>
+                <p id="project1Desc">Jamal created an online platform where people can learn the art of mewing for better jawline definition.</p>
+                <img src="DALL·E 2025-04-07 10.25.38 - A charismatic instructor named Jamal teaching a group of people how to practice proper oral posture (mewing). Jamal has a strong jawline, glasses, sty.webp"
+            </div>
+            <div class="project">
+                <h3 id="project2Title">Teaching People How to Code</h3>
+                <p id="project2Desc">Jamal runs a coding bootcamp helping beginners master Python, JavaScript, and web development.</p>
+                <img src="DALL·E 2025-04-07 10.26.00 - A stylish and charismatic instructor named Jamal teaching a large group of students how to code. Jamal has a strong jawline, glasses, and a hoodie wit.webp"
+            
+        </div>
+    </div>
+    <footer>
+        <p id="footer">&copy; 2025 Jamal Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

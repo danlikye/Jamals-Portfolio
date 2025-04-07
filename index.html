@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamal - The Legend</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: white;
+      text-align: center;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+    .section {
+      padding: 30px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s;
+    }
+    .section:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .language-select {
+      margin: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      background-color: #333;
+      color: #ffcc00;
+    }
+    .language-select:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    function translateLanguage() {
+      let language = document.getElementById("language").value;
+
+      if (language === "chinese") {
+        // Translate Header
+        document.getElementById("title").innerText = "贾马尔 - 传奇";
+
+        // Translate Navigation Links
+        document.getElementById("nav-about").innerText = "关于";
+        document.getElementById("nav-skills").innerText = "技能";
+        document.getElementById("nav-project").innerText = "项目";
+        document.getElementById("nav-contact").innerText = "联系";
+
+        // Translate About Section
+        document.getElementById("about-title").innerText = "关于贾马尔";
+        document.getElementById("about-text").innerText = "贾马尔是一位传奇程序员，以其敏锐的技能和创新思维而闻名。他热爱编码，掌握了各种编程语言，并不断推动科技界的边界。他的下巴线令人惊叹，他的魅力无与伦比，他的智慧超乎想象。";
+
+        // Translate Footer
+        document.getElementById("footer-text").innerText = "© 2025 贾马尔公司。版权所有。";
+
+      } else {
+        // Translate Header back to English
+        document.getElementById("title").innerText = "Jamal - The Sharpest Coder";
+
+        // Translate Navigation Links back to English
+        document.getElementById("nav-about").innerText = "About";
+        document.getElementById("nav-skills").innerText = "Skills";
+        document.getElementById("nav-project").innerText = "Project";
+        document.getElementById("nav-contact").innerText = "Contact";
+
+        // Translate About Section back to English
+        document.getElementById("about-title").innerText = "About Jamal";
+        document.getElementById("about-text").innerText = "Jamal is a legendary coder known for his sharp skills and innovative thinking. Passionate about coding, he has mastered various programming languages and continues to push boundaries in the tech world. His jawline is off the charts. His rizz is immaculate. and his brain is super massive.";
+
+        // Translate Footer back to English
+        document.getElementById("footer-text").innerText = "© 2025 Jamal Inc. All Rights Reserved.";
+      }
+    }
+  </script>
+</head> 
+<body>
+  <header>
+    <h1 id="title">Jamal - The Sharpest Coder</h1>
+  </header>
+  <nav>
+    <a href="index.html" id="nav-about">About</a>
+    <a href="skills.html" id="nav-skills">Skills</a>
+    <a href="Project.html" id="nav-project">Project</a>
+    <a href="contact.html" id="nav-contact">Contact</a>
+  </nav>
+  <select id="language" class="language-select" onchange="translateLanguage()">
+    <option value="english">English</option>
+    <option value="chinese">Chinese</option>
+  </select>
+  <div class="container">
+    <img src="863b172d-344b-4e61-ab8a-f59e785f8a28.webp" alt="Jamal's Legendary Look" class="profile-img">
+    <div class="section">
+      <h2 id="about-title">About Jamal</h2>
+      <p id="about-text">Jamal is a legendary coder known for his sharp skills and innovative thinking. Passionate about coding, he has mastered various programming languages and continues to push boundaries in the tech world. His jawline is off the charts. His rizz is immaculate. and his brain is super massive.</p>
+    </div>
+  </div>
+  <footer>
+    <p id="footer-text">&copy; 2025 Jamal Inc. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
